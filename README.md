@@ -42,6 +42,11 @@ streamlit run app.py
 Live demo
 
 Deployed on Streamlit Community Cloud (free tier).
+Live demo
+
+Deployed on Streamlit Community Cloud (free tier).
+
+
 
 
 
