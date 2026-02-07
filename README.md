@@ -39,4 +39,9 @@ No domain assumptions, no application claims — only structure, geometry, and d
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+Live demo
+
+Deployed on Streamlit Community Cloud (free tier).
+
+
 
