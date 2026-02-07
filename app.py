@@ -681,7 +681,7 @@ with tab5:
     
 
 with tab6:
-        st.subheader("Export")
+    st.subheader("Export")
     st.caption("Optimization trace (CSV).")
 
     fname = f"trace_{mode.replace(' ','_')}_{method.replace(' ','_')}.csv"
@@ -692,6 +692,7 @@ with tab6:
         mime="text/csv",
     )
 
+
     
 
     
@@ -699,4 +700,5 @@ with tab6:
    
 
         
+
 
