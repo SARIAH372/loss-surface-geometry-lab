@@ -608,7 +608,7 @@ with tab3:
         st.pyplot(fig3, clear_figure=True)
 
     
-    )
+    
 
 with tab4:
     st.subheader("Compare methods (side-by-side paths)")
@@ -699,3 +699,4 @@ with tab6:
    
 
         
+
