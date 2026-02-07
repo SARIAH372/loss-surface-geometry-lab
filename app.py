@@ -550,14 +550,7 @@ with tab1:
     ax.legend(loc="best")
     st.pyplot(fig, clear_figure=True)
 
-    st.markdown(
-        """
-**Local geometry overlay (final point):**
-- Arrow 1: downhill direction (−∇L)  
-- Arrow 2: tangent direction (orthogonal to ∇L; along level sets)
-"""
-    )
-
+    
 with tab2:
     st.subheader("Hessian eigen-geometry heatmap + eigenvalues along the path")
 
@@ -614,12 +607,7 @@ with tab3:
         ax3.set_title("Gradient norm vs step")
         st.pyplot(fig3, clear_figure=True)
 
-    st.markdown(
-        """
-Try:
-- Increase **η** to push into unstable regions.  
-- Switch **method** to see curvature-aware vs gradient-only behavior.  
-"""
+    
     )
 
 with tab4:
@@ -669,13 +657,7 @@ with tab4:
     axC.legend(loc="best", fontsize=8)
     st.pyplot(figC, clear_figure=True)
 
-    st.markdown(
-        """
-**Instant demos:** load a preset (sidebar) and then compare methods.
-- *Saddle (negative curvature)* → see why **min eig(H) < 0** matters  
-- *Sharp valley* → see conditioning effects on paths  
-"""
-    )
+    
 
 with tab5:
     st.subheader("Stability map (GD baseline)")
@@ -696,21 +678,11 @@ with tab5:
     axS.set_title("Stability vs step size (GD)")
     st.pyplot(figS, clear_figure=True)
 
-    st.write("Tip: load **Saddle (negative curvature)** preset and increase η_max to see divergence regions quickly.")
+    
 
 with tab6:
-    st.subheader("Export (portfolio-ready)")
-
-    st.markdown(
-        """
-Download the full optimization trace as CSV:
-- `step`
-- `(w1, w2)`
-- `loss`
-- `||grad||`
-- `min_eig(H)`, `max_eig(H)`
-"""
-    )
+        st.subheader("Export")
+    st.caption("Optimization trace (CSV).")
 
     fname = f"trace_{mode.replace(' ','_')}_{method.replace(' ','_')}.csv"
     st.download_button(
@@ -720,11 +692,10 @@ Download the full optimization trace as CSV:
         mime="text/csv",
     )
 
-    st.markdown("You can plot these columns later (or include them in your portfolio writeup).")
+    
 
-    # Tiny preview table (first ~10 rows)
-    st.write("Preview (first 10 rows):")
-    preview_lines = export_csv_bytes.decode("utf-8").splitlines()[:11]
-    st.code("\n".join(preview_lines), language="text")
+    
+
+   
 
         
