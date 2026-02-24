@@ -581,11 +581,13 @@ with tab2:
     axE.legend()
     st.pyplot(figE, clear_figure=True)
 
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Final loss", f"{losses[-1]:.4f}")
-    c2.metric("Final ||∇L||", f"{grad_norms[-1]:.4f}")
-    c3.metric("Final min eig(H)", f"{min_eigs[-1]:.4f}")
-    c4.metric("Final max eig(H)", f"{max_eigs[-1]:.4f}")
+    c1, c2 = st.columns(2)
+c3, c4 = st.columns(2)
+
+c1.metric("Final loss", f"{losses[-1]:.4f}")
+c2.metric("Final ||∇L||", f"{grad_norms[-1]:.4f}")
+c3.metric("Final min eig(H)", f"{min_eigs[-1]:.4f}")
+c4.metric("Final max eig(H)", f"{max_eigs[-1]:.4f}")
 
 with tab3:
     st.subheader("Optimization diagnostics")
@@ -700,5 +702,6 @@ with tab6:
    
 
         
+
 
 
